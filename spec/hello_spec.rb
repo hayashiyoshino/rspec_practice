@@ -22,4 +22,12 @@ RSpec.describe Hello do
   it "10 - 1 は 9 になること" do
     expect(10 - 1).to eq 9
   end
+
+  it "全部できること" do
+    expect(1 + 2).to eq 3
+    expect(10 - 1).to eq 9
+    expect(4 * 8).to eq 32
+    expect(40 / 5).to eq 8
+  end
+  #このように1つのexampleの中に複数のエクスペクテーションを書くのも良いが、テストが失敗した時にその先のエクスペクテーションが通過するのかしないのか判断ができなくなってしまう。
 end
