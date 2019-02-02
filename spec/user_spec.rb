@@ -11,15 +11,21 @@ RSpec.describe User do
     context '12歳以下の場合' do
       #describe以外にもcontextという機能でテストをグループ化することもできます。
       #contextは条件を分けたりする時に使うことが多いです。
+      before do
+        @params.merge!(age: 12)
+      end
       it '「〜だよ。」で答えること' do
-        user = User.new(@params.merge(age: 12))
+        user = User.new(@params)
         expect(user.greet).to eq '私はたろうだよ。'
       end
     end
 
     context '13歳以上の場合' do
+      before do
+        @params.merge!(age: 13)
+      end
       it '「〜です。」で答えること' do
-        user = User.new(@params.merge(age: 13))
+        user = User.new(@params)
         expect(user.greet).to eq '私はたろうです。'
       end
     end
