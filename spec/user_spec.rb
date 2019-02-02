@@ -9,7 +9,9 @@ RSpec.describe User do
 
   describe '#greet' do
     #「インスタンスメソッドのgreetメソッドをテストしますよ」という意味でdescribe '#greet' のように書くこともある。
+    let(:user) { User.new(params) }
     let(:params) { {name: 'たろう'} }
+    #インスタンス変数の代わりにletを使って書くこともできる。
 
     context '12歳以下の場合' do
       #describe以外にもcontextという機能でテストをグループ化することもできます。
@@ -18,7 +20,6 @@ RSpec.describe User do
         params.merge!(age: 12)
       end
       it '「〜だよ。」で答えること' do
-        user = User.new(params)
         expect(user.greet).to eq '私はたろうだよ。'
       end
     end
@@ -28,7 +29,6 @@ RSpec.describe User do
         params.merge!(age: 13)
       end
       it '「〜です。」で答えること' do
-        user = User.new(params)
         expect(user.greet).to eq '私はたろうです。'
       end
     end
