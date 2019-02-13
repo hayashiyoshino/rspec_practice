@@ -8,3 +8,4 @@ gem "pry"
 gem "faker"
 gem "factory_girl_rails"
 gem "factory_girl"
+
