@@ -1,5 +1,6 @@
 class Task
-  def initialize
+  def initialize(task)
+    @task = task
   end
 
 end
