@@ -4,4 +4,8 @@ class Task
     @description = description
   end
 
+  def title
+    return @title
+  end
+
 end
