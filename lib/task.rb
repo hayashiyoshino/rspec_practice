@@ -1,6 +1,7 @@
 class Task
   def initialize(task)
-    @task = task
+    @title = title
+    @description = description
   end
 
 end
