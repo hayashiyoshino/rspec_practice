@@ -8,4 +8,8 @@ class Task
     return @title
   end
 
+  def description
+    return @description
+  end
+
 end
