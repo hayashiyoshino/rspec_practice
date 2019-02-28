@@ -12,4 +12,8 @@ class Task
     return @description
   end
 
+  def title=(val)
+    @title = val
+  end
+
 end
