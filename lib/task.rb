@@ -16,4 +16,8 @@ class Task
     @title = val
   end
 
+  def description=(val)
+    @description = description
+  end
+
 end
